@@ -24,9 +24,21 @@
 以上により、本コンペの提出形式は実際の運用さながらのリアルタイム予測ストリーミングに近く、将来データの盗み見（情報漏洩）を防ぎつつ現実的な戦略性能を競うものとなっています。
 
 # 準備
-## 1 kaggle CLI / API の準備
+## 0. uvのインストール
+このプロジェクトではuvというpythonライブラリバージョン管理ツールを使う。Rust製で超爆速。[紹介link](https://speakerdeck.com/mickey_kubo/pythonpatukeziguan-li-uv-wan-quan-ru-men)
+
+どこからでも使えるようにグローバルインストールしておく。
+`pip install uv`
+このプロジェクトのディレクトリに入り、`uv sync`をして仮想環境を整える。
+
+
+## 1. kaggle CLI / API の準備
 
 - pip install kaggle もしくは、uv add kaggleでkaggle CLIを落とす
 - kaggle > settings > API にてkaggle.jsonをローカルに保存
 - kaggle CLI の環境をアクティベートし、以下のコマンドでテスト > zipがダウンロードされていたら成功
   ` kaggle competitions download -c hull-tactical-market-prediction`
+
+## 2. jupyter notebookの準備
+- VSCodeの拡張機能 Jupyter をインストールする
+- 仮想環境を選んで実行
